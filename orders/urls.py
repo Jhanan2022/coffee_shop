@@ -1,7 +1,7 @@
 from django.urls import path
-from products.views import ProductFormView, ProductListView
+from .views import MyOrderView, add_product_to_order
 
 urlpatterns = [
-    #path('agregar/', ProductFormView.as_view(), name="add_product"),
-    #path('', ProductListView.as_view(), name="list_product"),
+    path('mi-orden/', MyOrderView.as_view(), name="my_order"),
+    path("agregar-producto/", add_product_to_order, name="add_product")
 ]
